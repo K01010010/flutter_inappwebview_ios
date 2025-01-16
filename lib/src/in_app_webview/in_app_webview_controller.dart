@@ -118,6 +118,8 @@ class IOSInAppWebViewController extends PlatformInAppWebViewController
 
     this._init(params);
   }
+  
+  void forceInitMethodCallHandler() => initMethodCallHandler();
 
   static final IOSInAppWebViewController _staticValue =
       IOSInAppWebViewController(
