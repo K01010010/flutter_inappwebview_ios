@@ -1084,6 +1084,10 @@ public class WebViewChannelDelegate: ChannelDelegate {
     }
     
     public func onCallJsHandler(handlerName: String, args: String, callback: CallJsHandlerCallback) {
+        self.channelDelegate?.onConsoleMessage(
+            message: "onCallJsHandler(Handler: \(handlerName), Args: \(args))",
+            messageLevel: 3
+        )
         if channel == nil {
             callback.defaultBehaviour(nil)
             return
